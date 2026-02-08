@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI File Namer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI File Namer</h1>
+      <p class="subtitle">Smart filenames powered by Gemini AI</p>
+    </header>
+
+    <section class="toggle-section">
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+      <span id="statusText" class="status-text">Enabled</span>
+    </section>
+
+    <section class="settings-section">
+      <label for="apiKey">Gemini API Key</label>
+      <div class="input-group">
+        <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+        <button id="toggleVisibility" class="icon-btn" title="Show/Hide">
+          <span id="eyeIcon">&#128065;</span>
+        </button>
+      </div>
+      <div class="button-row">
+        <button id="saveBtn" class="btn btn-primary">Save</button>
+        <button id="testBtn" class="btn btn-secondary">Test Key</button>
+      </div>
+      <div id="statusMsg" class="status-msg hidden"></div>
+    </section>
+
+    <section class="history-section">
+      <h2>Recent Renames</h2>
+      <div id="historyList" class="history-list">
+        <p class="empty-state">No renames yet. Download an image to get started.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Right-click any image &rarr; "Download with AI Name"</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

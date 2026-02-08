@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AI File Namer",
+  "version": "1.0.0",
+  "description": "Automatically rename downloaded images and files with meaningful names using Gemini AI and OCR analysis.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "contextMenus",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
